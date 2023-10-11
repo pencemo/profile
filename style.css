@@ -17,22 +17,30 @@ body{
 }
 
 .container{
-    width: 90%;
-    max-width: 350px;
-    height: 60vh;
+    padding: 40px 70px;
     background-color: rgb(39, 39, 39);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.2);
 }
 
-img{
-    margin-top: -50px;
-    width: 120px;
+.image1{
+    width: 140px;
+    height: 140px;
+    border: solid #fff 6px;
+    background-color: #eb73db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    overflow: hidden;
+} 
+img{
+    width: 200px;
+    margin-top: 60px;
 }
 
 h2{
@@ -49,53 +57,143 @@ h4{
     font-weight: 300;
 }
 
-.icon a{
-    
-    margin: 4px;
+.icon{
+    padding-top: 20px;
 }
 
-.icon i{
+.icon span{
+    margin: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2rem;
+    flex: 0 0 2rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    border: solid #fff 1px;
+}
+.icon span i{
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
+}
+
+.location{
+    color: #b3b3b3;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.btn button{
+    border: none;
+    margin-top: 30px;
+    background-image: linear-gradient(45deg, #0c8742, #75c26f);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.line span{
+    width: 90%;
+    max-width: 100px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.line p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
     margin-top: 20px;
-    background-color: #141414;
-    padding: 8px;
-    border-radius: 30%;
+}
+
+.social-media{
+    margin: 6px;
+}
+
+.social-media i{
+    color: #fff;
+    margin: 2px;
     transition: all 0.5s;
 }
 
-.icon i:hover{
-    color: #141414;
-    background-color: #fff;
+
+
+.social-media span .fa-facebook-f{
+    border-radius: 50%;
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    background-color: #3759c7;
 }
 
-.contact i{
-    font-size: 20px;
-    color: rgb(32, 32, 32);
-    margin-top: 25px;
-    background-color: rgb(10, 233, 159);
-    padding: 8px 30px;
-    border-radius: 10px;
+.social-media span .fa-instagram{
+    border-radius: 50%;
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    background-image: linear-gradient(45deg, #ffe185, #ffbb36, #ff5176, #f63395, #a436d2, #5f4eed);
 }
+
+.social-media span .fa-whatsapp{
+    border-radius: 50%;
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    background-color: #5aa755;
+}
+
+.social-media span .fa-twitter{
+    border-radius: 50%;
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    background-color: #48b5d6;
+}
+
+
+/* hover effect */
+
+.social-media span:hover i{
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0,0.6);
+    transform: translate(0,-8px);
+}
+
+.btn button:hover{
+    color: #0c8742;
+    background-image: none;
+    transform: scale(1.1);
+}
+
+
+
 .brand{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
 }
-.brand span{
-    margin-top: 50px;
-    width: 90%;
-    max-width: 600px;
-    height: 0.2px;
-    background-color: rgb(156, 156, 156);
-}
-
-.brand .logo{
-    width: 200px;
-    margin-top: 1px;
+.logo{
+    width: 120px;
+    position: absolute;
+    bottom: 40px;
 }
 
 .brand p{
+    position: absolute;
+    bottom: 20px;
     color: #fff;
     font-size: 12px;
     font-weight: 100;
