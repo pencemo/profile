@@ -16,19 +16,31 @@ body {
 }
 
 .container {
-  padding: 40px 70px;
+  padding: 30px 70px;
   background-color: rgb(39, 39, 39);
-  border-radius: 20px;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.box{
+  position: absolute;
+  top: 0;
+  background-color: #494949;
+  width: 100%;
+  height: 300px;
+  z-index: 0;
 }
 
 .image1 {
-  width: 140px;
-  height: 140px;
+  position: relative;
+  bottom: 10PX;
+  width: 150px;
+  height: 150px;
   border: solid #fff 6px;
   background-color: #eb73db;
   display: flex;
@@ -61,20 +73,21 @@ h4 {
 }
 
 .icon span {
-  margin: 2px;
+  margin: 2.5px;
   border-radius: 50%;
   display: inline-block;
-  height: 2rem;
+  height: 2.5rem;
   overflow: hidden;
   text-align: center;
-  line-height: 2rem;
-  width: 2rem;
+  line-height: 2.5rem;
+  width: 2.5rem;
   border: solid #fff 1px;
   transition: all 0.5s;
 }
 .icon span i {
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
+  padding: 10px;
 }
 
 .location {
@@ -137,27 +150,28 @@ h4 {
 
 .social-media i {
   color: #fff;
-  margin: 2px;
+  font-size: 20px;
+  margin: 3px;
   transition: all 0.5s;
 }
 
 .social-media span .fa-facebook-f {
   border-radius: 50%;
-  height: 2rem;
+  height: 2.3rem;
   overflow: hidden;
   text-align: center;
-  line-height: 2rem;
-  width: 2rem;
+  line-height: 2.3rem;
+  width: 2.3rem;
   background-color: #3759c7;
 }
 
 .social-media span .fa-instagram {
   border-radius: 50%;
-  height: 2rem;
+  height: 2.3rem;
   overflow: hidden;
   text-align: center;
-  line-height: 2rem;
-  width: 2rem;
+  line-height: 2.3rem;
+  width: 2.3rem;
   background-image: linear-gradient(
     45deg,
     #ffe185,
@@ -171,21 +185,21 @@ h4 {
 
 .social-media span .fa-whatsapp {
   border-radius: 50%;
-  height: 2rem;
+  height: 2.3rem;
   overflow: hidden;
   text-align: center;
-  line-height: 2rem;
-  width: 2rem;
+  line-height: 2.3rem;
+  width: 2.3rem;
   background-color: #5aa755;
 }
 
 .social-media span .fa-twitter {
   border-radius: 50%;
-  height: 2rem;
+  height: 2.3rem;
   overflow: hidden;
   text-align: center;
-  line-height: 2rem;
-  width: 2rem;
+  line-height: 2.3rem;
+  width: 2.3rem;
   background-color: #48b5d6;
 }
 
@@ -206,10 +220,11 @@ h4 {
   color: #0c8742;
 }
 
-.icon span:hover{
-    border: #c5c5c5 solid 1px;
+.icon span:hover {
+    background-color: #555555;
     border-radius: 10px;
     transform: translate(0, -4px);
+    border: none;
 }
 
 /* ----------------------- */
@@ -246,3 +261,37 @@ h4 {
 
 
 
+/* loding  */
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* -------------- */
+
+
+/* media  */
+@media screen and (min-width: 500px) {
+  .line-botam{
+    position: absolute;
+    bottom: 40px;
+    min-width: 70%;
+    height: 0.1px;
+    background-color: rgb(151, 151, 151);
+}
+}

@@ -82,3 +82,10 @@ END:VCARD`;
             event.target.href = url;
         });
   
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loader when the page is fully loaded
+            const loader = document.getElementById("loader");
+            loader.style.display = "none";
+        });
