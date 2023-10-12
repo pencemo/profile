@@ -34,31 +34,51 @@
         //     }
         // });
 
-        document.getElementById('addPhoneNumberButton').addEventListener('click', function() {
+        // document.getElementById('addPhoneNumberButton').addEventListener('click', function() {
+        //     const phoneNumber = '+1234567890';
+
+        //     // Check if the Contacts API is available
+        //     if ('contacts' in navigator) {
+        //         navigator.contacts.select(['tel'], { multiple: true })
+        //             .then(contacts => {
+        //                 const newContact = new Contact({
+        //                     tel: [phoneNumber],
+        //                 });
+
+        //                 const saveOptions = {
+        //                     contacts: [newContact],
+        //                 };
+
+        //                 return navigator.contacts.save(saveOptions);
+        //             })
+        //             .then(() => {
+        //                 alert('Phone number added to contacts successfully.');
+        //             })
+        //             .catch(error => {
+        //                 console.error('Error adding phone number to contacts:', error);
+        //                 alert('Error adding phone number to contacts. Please try again later.');
+        //             });
+        //     } else {
+        //         alert('Your browser does not support the Contacts API.');
+        //     }
+        // });
+
+
+
+      
+        document.getElementById('downloadContactLink').addEventListener('click', function(event) {
             const phoneNumber = '+1234567890';
-
-            // Check if the Contacts API is available
-            if ('contacts' in navigator) {
-                navigator.contacts.select(['tel'], { multiple: true })
-                    .then(contacts => {
-                        const newContact = new Contact({
-                            tel: [phoneNumber],
-                        });
-
-                        const saveOptions = {
-                            contacts: [newContact],
-                        };
-
-                        return navigator.contacts.save(saveOptions);
-                    })
-                    .then(() => {
-                        alert('Phone number added to contacts successfully.');
-                    })
-                    .catch(error => {
-                        console.error('Error adding phone number to contacts:', error);
-                        alert('Error adding phone number to contacts. Please try again later.');
-                    });
-            } else {
-                alert('Your browser does not support the Contacts API.');
-            }
+            const contactName = 'John Doe';
+            
+            const vcfContent = `BEGIN:VCARD
+VERSION:3.0
+FN:${contactName}
+TEL:${phoneNumber}
+END:VCARD`;
+            
+            const blob = new Blob([vcfContent], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            
+            event.target.href = url;
         });
+  
