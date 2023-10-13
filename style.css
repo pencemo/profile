@@ -15,6 +15,39 @@ body {
   justify-content: center;
 }
 
+.animat{
+  position: absolute;
+  width: 700px;
+  height: 800px;
+  border-radius: 50px;
+  background-image: linear-gradient(45deg, #ffffff, transparent, transparent, transparent);
+  z-index: -2;
+  animation: rotat 4s linear infinite;
+}
+
+@keyframes rotat {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(370deg);
+  }
+}
+
+.inner {
+  width: 99%;
+  height: 99%;
+  border-radius: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(39, 39, 39);
+  z-index: -2;
+  
+}
+
 .container {
   padding: 30px 70px;
   background-color: rgb(39, 39, 39);
@@ -27,9 +60,10 @@ body {
   justify-content: center;
   box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
+  overflow: hidden;
 }
 
-.box{
+.bg-box{
   position: absolute;
   top: -400px;
   background-image: linear-gradient(45deg, #313131, #424242);
@@ -39,13 +73,13 @@ body {
   z-index: 0;
 }
 
-.image1 {
+.image-box {
   position: relative;
   bottom: 10PX;
   width: 150px;
   height: 150px;
-  border: solid #fff 6px;
-  background-color: #eb73db;
+  border: solid #fff 5px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,29 +87,30 @@ body {
   overflow: hidden;
 }
 img {
-  width: 200px;
-  margin-top: 60px;
+  width: 100%;
 }
 
-h2 {
+.name {
   margin-top: 10px;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 
-h4 {
+.designation {
   margin-top: -4px;
   color: rgb(161, 161, 161);
   font-size: 16px;
   font-weight: 300;
+  text-align: center;
+  line-height: 16px;
 }
 
 .icon {
   padding-top: 20px;
 }
 
-.icon span {
+.icon .round {
   margin: 2.5px;
   border-radius: 50%;
   display: inline-block;
@@ -87,7 +122,7 @@ h4 {
   border: solid #fff 1px;
   transition: all 0.5s;
 }
-.icon span i {
+.icon .round i {
   color: #fff;
   font-size: 18px;
   padding: 10px;
@@ -116,28 +151,21 @@ h4 {
   color: #fff;
 }
 
-.line span {
-  width: 90%;
-  max-width: 100px;
-  height: 10px;
-  background-color: rgb(255, 255, 255);
-}
-
-.line{
+.line-div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.line .line1{
+.line-div .line{
     position: absolute;
     margin-top: 20px;
     width: 200px;
     height: 1px;
     background-color: rgb(151, 151, 151);
 }
-.line p {
+.line-div .follow-me {
     background-color: rgb(39, 39, 39);
     padding: 0 10px;
   color: #fff;
@@ -196,14 +224,14 @@ h4 {
   background-color: #5aa755;
 }
 
-.social-media span .fa-twitter {
+.social-media span .fa-behance {
   border-radius: 50%;
   height: 2.3rem;
   overflow: hidden;
   text-align: center;
   line-height: 2.3rem;
   width: 2.3rem;
-  background-color: #48b5d6;
+  background-color: #053eff;
 }
 
 /* hover effect */
@@ -223,7 +251,7 @@ h4 {
   color: #0c8742;
 }
 
-.icon span:hover {
+.icon .round:hover {
     background-color: #555555;
     border-radius: 10px;
     transform: translate(0, -4px);
@@ -232,7 +260,7 @@ h4 {
 
 /* ----------------------- */
 
-.brand {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,19 +273,18 @@ h4 {
   bottom: 50px;
 }
 
-.brand p {
+.footer .Copyright {
   position: absolute;
   bottom: 20px;
   color: #fff;
   font-size: 10px;
   font-weight: 100;
 }
-.brand a{
+.Copyright a{
   text-decoration: none;
   font-weight: 400;
   color: #ffffff;
 }
-
 
 .line-botam{
     position: absolute;
@@ -298,5 +325,9 @@ h4 {
 @media all and (max-width: 500px) {
   .line-botam{
     min-width: 80%;
+  }
+  .bg-box{
+    position: absolute;
+    top: -500px;
   }
 }

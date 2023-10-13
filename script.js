@@ -67,8 +67,8 @@
 
       
         document.getElementById('downloadContactLink').addEventListener('click', function(event) {
-            const phoneNumber = '+1234567890';
-            const contactName = 'John Doe';
+            const phoneNumber = '+918590305060';
+            const contactName = 'Neptune Mark';
             
             const vcfContent = `BEGIN:VCARD
 VERSION:3.0
